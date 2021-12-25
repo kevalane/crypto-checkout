@@ -1,0 +1,27 @@
+{
+  "name": "crypto-checkout",
+  "version": "1.0.0",
+  "description": "A crypto payment gateway implemented using the coinbase commerce api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevalane/crypto-checkout.git"
+  },
+  "keywords": [
+    "crypto",
+    "paywall",
+    "payment",
+    "gateway",
+    "crypto",
+    "checkout"
+  ],
+  "author": "Kevin Rasmusson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevalane/crypto-checkout/issues"
+  },
+  "homepage": "https://github.com/kevalane/crypto-checkout#readme"
+}
