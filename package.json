@@ -23,5 +23,10 @@
   "bugs": {
     "url": "https://github.com/kevalane/crypto-checkout/issues"
   },
-  "homepage": "https://github.com/kevalane/crypto-checkout#readme"
+  "homepage": "https://github.com/kevalane/crypto-checkout#readme",
+  "dependencies": {
+    "coinbase-commerce-node": "^1.0.4",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2"
+  }
 }
