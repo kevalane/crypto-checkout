@@ -2,7 +2,7 @@
 
 This is the code following my tutorial on implementing a crypto payment gateway using coinbase commerce.
 
-The corresponding article can be found on medium, https://medium.com
+The corresponding article can be found on medium, https://kevinrasmusson.medium.com/implementing-a-crypto-payment-gateway-using-nodejs-928a84ea4f50
 
 ## Start
 
