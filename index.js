@@ -13,7 +13,6 @@ let server = app.listen(process.env.PORT, () => {
 const Client = coinbase.Client;
 Client.init(process.env.API_KEY);
 const Charge = coinbase.resources.Charge;
-const Event = coinbase.resources.Event;
 
 app.get('/charge', (req, res) => {
 	let chargeData = {
@@ -40,7 +39,7 @@ app.get('/charge', (req, res) => {
 app.get('/status', (req, res) => {
 	let id = '4c3acb58-60f9-40f2-9ee1-83b2ad3f2f35';
 	Charge.retrieve(id, (err, charge) => {
-		if(charge['timeline'][1]['status'] == 'NEW') {
+		if(charge['timeline'][0]['status'] == 'NEW') {
 			// created, nothing happening
 		} else if (charge['timeline'][1]['status'] == 'PEDNING') {
 			// pending, payment has been seen
@@ -49,6 +48,7 @@ app.get('/status', (req, res) => {
 		} else if (charge['timeline'][2]['status'] == 'COMPLETED') {
 			// payment completed
 		}
+		res.send(charge);
 	});
 });
 
