@@ -30,7 +30,24 @@ app.get('/charge', (req, res) => {
 		if (err) {
 			res.status(400).send({message: err.message});
 		} else {
+			// response['id']
+			// response['hosted_url']
 			res.status(200).send(response);
+		}
+	});
+});
+
+app.get('/status', (req, res) => {
+	let id = '4c3acb58-60f9-40f2-9ee1-83b2ad3f2f35';
+	Charge.retrieve(id, (err, charge) => {
+		if(charge['timeline'][1]['status'] == 'NEW') {
+			// created, nothing happening
+		} else if (charge['timeline'][1]['status'] == 'PEDNING') {
+			// pending, payment has been seen
+		} else if (charge['timeline'][1]['status'] == 'EXPIRED') {
+			// the hour has passed, expired charge
+		} else if (charge['timeline'][2]['status'] == 'COMPLETED') {
+			// payment completed
 		}
 	});
 });
